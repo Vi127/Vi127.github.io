@@ -11,10 +11,12 @@
     <div>
         <ul id="pdfs">
             <li>
-                <a href="the3_lecture_01.pdf"> the3 lecture 1</a>
+                <h3> pdf 1 </h3>
+                <!--<a href="the3_lecture_01.pdf"> the3 lecture 1</a> -->
             </li>
             <li>
-                <a href="the3_lecture_02.pdf"> the3 lecture 2</a>
+                <h3> pdf 2 </h3>
+                <!--<a href="the3_lecture_02.pdf"> the3 lecture 2</a> -->
             </li>
         </ul>
     </div>
