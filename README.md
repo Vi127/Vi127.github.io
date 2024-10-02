@@ -11,6 +11,7 @@
 <body>
     <h1 style="color: rgba(24, 44, 76, 1);">Project Name</h1>
     <div>
+        <h2> PDFs: </h2>
         <ul id="pdfs:">
             <li>
                 <h3> pdf 1 </h3>
