@@ -6,7 +6,7 @@
     <title>groupname: Project</title>
     <meta property="og:title" content="Team2: Project Name">
     <meta property="og:site_name" content="Team2: Project Name">
-    <meta property="twitter:title" content="Team2: Project Namw">
+    <meta property="twitter:title" content="Team2: Project Name">
 </head>
 <body>
     <h1 style="color: rgba(24, 44, 76, 1);">Project Name</h1>
