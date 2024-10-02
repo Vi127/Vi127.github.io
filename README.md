@@ -1,12 +1,13 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styling.css">
-    <title>groupname: Project</title>
+    <title>Team2: Project</title>
     <meta property="og:title" content="Team2: Project Name">
     <meta property="og:site_name" content="Team2: Project Name">
-    <meta property="twitter:title" content="Team2: Project Name">
+    <meta property="og:description" content="Team2: Project Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <h1 style="color: rgba(24, 44, 76, 1);">Project Name</h1>
