@@ -1,8 +1,8 @@
 body{
     background-color: rgb(249, 245, 254);
     box-shadow: inset;
-    #padding-left: 5%;
-    #padding-top: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
 }
 
 h1 {
@@ -10,6 +10,9 @@ h1 {
     color: #182c4c;
     padding-left: 3%;
 }
+
+h2 {
+    padding-left: 2%;
 
 #pdfs {
     padding-left: 10%;
