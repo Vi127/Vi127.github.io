@@ -40,4 +40,194 @@
   <b>Secondary Actors:</b> None
 </p>
 </div>
+
+<div class="Destroy building">
+  <h3><b>2. Destroy Building</b></h3>
+  <p>
+    <b>Primary actor:</b> Player<br>
+    <b>Scope:</b> Game<br>
+    <b>Level:</b> User Goal<br>
+    <b>Stakeholders and Interests:</b><br>
+    Player: Wants to remove a building from the map.<br>
+    <b>Precondition:</b> Game is not paused<br>
+    <b>Minimal Guarantees:</b> All buildings remain as they are.<br>
+    <b>Success Guarantees:</b> The chosen building is removed from the map; the removal of the building has an effect on the score; building counter goes down.<br>
+    <b>Trigger:</b> Player decides to destroy a building.<br>
+    <b>Main Success Scenario:</b>
+  </p>
+  <ol>
+    <li>Player: select building on map.</li>
+    <li>Player: select destroy option.</li>
+    <li>Building Counter: decrease by one.</li>
+    <li>Map: no longer display a building in that location.</li>
+    <li>Score: calculate score.</li>
+  </ol>
+  <p>
+    <b>Extensions:</b><br>
+    Player selects an area of the map that does not contain a building: Do not display any options.<br>
+    <b>Secondary Actors:</b> None
+  </p>
+</div>
+
+<div class="Pause">
+  <h3><b>3. Pause</b></h3>
+  <p>
+    <b>Primary actor:</b> Player<br>
+    <b>Scope:</b> Game<br>
+    <b>Level:</b> User Goal<br>
+    <b>Stakeholders and Interests:</b><br>
+    Player: Wants to pause the timer.<br>
+    Timer: Wants to stop counting down while the game is paused.<br>
+    <b>Precondition:</b> Game is not paused<br>
+    <b>Minimal Guarantees:</b> Game remains unpaused.<br>
+    <b>Success Guarantees:</b> Timer stops counting down; displays unpause button; Player is not able to interact with any elements apart from the unpause button.<br>
+    <b>Trigger:</b> Player decides to pause game.<br>
+    <b>Main Success Scenario:</b>
+  </p>
+  <ol>
+    <li>Player: interact with the pause button.</li>
+    <li>Timer: stop counting down, remember its current time.</li>
+    <li>Map: display unpause button, do not allow player to interact with any other elements.</li>
+  </ol>
+  <p>
+    <b>Extensions:</b> None<br>
+    <b>Secondary Actors:</b> Timer
+  </p>
+</div>
+
+<div class="Resume">
+  <h3><b>4. Resume</b></h3>
+  <p>
+    <b>Primary actor:</b> Player<br>
+    <b>Scope:</b> Game<br>
+    <b>Level:</b> User Goal<br>
+    <b>Stakeholders and Interests:</b><br>
+    Player: Wants to resume the timer.<br>
+    Timer: Wants to start counting down again from the time it was paused at.<br>
+    <b>Precondition:</b> Game is paused<br>
+    <b>Minimal Guarantees:</b> Game remains paused.<br>
+    <b>Success Guarantees:</b> Timer resumes counting down, Player is able to interact with the main game elements again; unpause button is no longer displayed.<br>
+    <b>Trigger:</b> Player decides to resume the game.<br>
+    <b>Main Success Scenario:</b>
+  </p>
+  <ol>
+    <li>Player: interact with the unpause button.</li>
+    <li>Timer: resume counting down from the time it was paused at.</li>
+    <li>Map: remove unpause button from display, reallow player to interact with other elements.</li>
+  </ol>
+  <p>
+    <b>Extensions:</b> None<br>
+    <b>Secondary Actors:</b> Timer
+  </p>
+</div>
+
+<div class="Game ends">
+  <h3><b>5. Game Ends</b></h3>
+  <p>
+    <b>Primary actor:</b> Timer<br>
+    <b>Scope:</b> Game<br>
+    <b>Level:</b> User Goal<br>
+    <b>Stakeholders and Interests:</b><br>
+    Timer: Wants to stop counting down at zero.<br>
+    Player: Wants to view their final score.<br>
+    <b>Precondition:</b> Game is unpaused<br>
+    <b>Minimal Guarantees:</b> Timer stops counting down; Player is not able to interact with any elements of the main game; play again button is displayed.<br>
+    <b>Success Guarantees:</b> Timer stops counting down; Player is not able to interact with any elements of the main game; play again button is displayed; Player’s final score is displayed.<br>
+    <b>Trigger:</b> Timer has reached zero.<br>
+    <b>Main Success Scenario:</b>
+  </p>
+  <ol>
+    <li>Timer: stop counting down.</li>
+    <li>Map: display play again button.</li>
+    <li>Score: calculate score.</li>
+    <li>Map: display score breakdown.</li>
+    <li>Map: do not allow Player to interact with other elements.</li>
+  </ol>
+  <p>
+    <b>Extensions:</b><br>
+    There is an error displaying the score: Display an error message instead.<br>
+    <b>Secondary Actors:</b> None
+  </p>
+</div>
+
+<div class="Event occurs">
+  <h3><b>6. Event Occurs</b></h3>
+  <p>
+    <b>Primary actor:</b> Player<br>
+    <b>Scope:</b> Game<br>
+    <b>Level:</b> User Goal<br>
+    <b>Stakeholders and Interests:</b><br>
+    Player: Wants to keep increasing student satisfaction scores.<br>
+    <b>Precondition:</b> Game is not paused<br>
+    <b>Minimal Guarantees:</b> Student satisfaction score increases or decreases.<br>
+    <b>Success Guarantees:</b> Event occurs, changing the student satisfaction score and possibly changes player’s funds depending on what the event is.<br>
+    <b>Trigger:</b> Random point in gameplay.<br>
+    <b>Main Success Scenario:</b>
+  </p>
+  <ol>
+    <li>Map: Informative message pops up to explain the positive event.</li>
+    <li>Score: Student satisfaction score increases by an appropriate amount.</li>
+    <li>Map: User is notified of any changes to the student satisfaction score and/or funds.</li>
+    <li>Player: Continues playing the game or reacts to the event.</li>
+  </ol>
+  <p>
+    <b>Extensions:</b><br>
+    1a. Negative event occurs: Student satisfaction score decreases, user must react to it.<br>
+    1b. Neutral event occurs: Student satisfaction score unchanged, user can choose to react.<br>
+    <b>Secondary Actors:</b> None
+  </p>
+</div>
+
+<div class="Money increase">
+  <h3><b>7. Money Increase</b></h3>
+  <p>
+    <b>Primary actor:</b> Timer<br>
+    <b>Scope:</b> Game<br>
+    <b>Level:</b> User Goal<br>
+    <b>Stakeholders and Interests:</b><br>
+    Player: Wants to view updated balance.<br>
+    <b>Precondition:</b> Game is unpaused<br>
+    <b>Minimal Guarantees:</b> User is notified of an increase in balance, the notification pop-up gives the amount of money and the reason for the increase; player is able to exit out of the pop-up using an “x” button; game play resumes.<br>
+    <b>Success Guarantees:</b> Player’s updated balance is displayed. Player is aware of the increase in money. Player can resume play easily and quickly.<br>
+    <b>Trigger:</b> Random point in game play.<br>
+    <b>Main Success Scenario:</b>
+  </p>
+  <ol>
+    <li>Map: Informative message pops up to explain the increase in money.</li>
+    <li>Balance: Bank balance is increased.</li>
+    <li>Player: Player exits out of the pop-up and continues playing the game.</li>
+  </ol>
+  <p>
+    <b>Extensions:</b><br>
+    2a. There is an error displaying the balance: Display an error message instead.<br>
+    <b>Secondary Actors:</b> None
+  </p>
+</div>
+
+<div class="Player responds to event">
+  <h3><b>8. Player Responds to Event</b></h3>
+  <p>
+    <b>Primary actor:</b> Player<br>
+    <b>Scope:</b> Game<br>
+    <b>Level:</b> User Goal<br>
+    <b>Stakeholders and Interests:</b><br>
+    Player: Wants to select an appropriate response to an event that will increase the student satisfaction score the most.<br>
+    <b>Precondition:</b> Game is not paused. An event has occurred.<br>
+    <b>Minimal Guarantees:</b> The player can choose their response. This action will either increase or decrease the student satisfaction points.<br>
+    <b>Success Guarantees:</b> The chosen action is performed. User receives feedback to confirm this. The student satisfaction score has either increased or decreased.<br>
+    <b>Trigger:</b> An event has occurred.<br>
+    <b>Main Success Scenario:</b>
+  </p>
+  <ol>
+    <li>Map: Choices displayed to the user.</li>
+    <li>Player: User selects a choice.</li>
+    <li>Map: Choice’s effects are explained/shown to the user.</li>
+    <li>Score: Student satisfaction score is changed appropriately according to the choice made.</li>
+  </ol>
+  <p>
+    <b>Extensions:</b> None<br>
+    <b>Secondary Actors:</b> None
+  </p>
+</div>
+
 </body>
