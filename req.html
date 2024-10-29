@@ -10,30 +10,31 @@
 
 <div class = "Place building">
 <h3> <b>1. Place Building </b></h3>
-<p><b>Primary actor: </b>Player<br>
-<b>Scope:</b>Game<br>
-<b>Level:</b> User Goal<br>
-<b>Stakeholders and Interests:</b><br>
-Player: Wants to add a new building to the map.<br>
-<b>Precondition:</b> Game is not paused<br>
-<b>Minimal Guarantees:</b> No building is placed and Player’s funds remain unchanged.<br>
-<b>Success Guarantees:</b> New building is visible on map after short build time; position of new building has effect on the score; building counter goes up; position of new building has effect on score.<br>
-<b>Trigger:</b> Player decides to place a building.<br>
-<b>Main Success Scenario:</b>
-<ol>
-<li>Player: select building type from list.</li>
-<li>Player: choose location for building on map grid.</li>
-<li>Player: pay for building.</li>
-<li>Building Counter: increase by one.</li>
-<li>Map: display building in a construction state in the chosen location for a predetermined building time.</li>
-<li>Map: display building in finished state in the chosen location.</li>
-<li>Score: calculate score.</li>
-</ol>
-<b>Extensions:</b><br>
-1a. Player does not have sufficient funds: Do not allow Player to select the building type (give visible/audible feedback? prompt Player to select different building?).<br>
-2a. The chosen location is invalid: Prompt Player to choose a new location or cancel. <br>
-5a. Game ends during the building time: Do not do any of the following points in the main success scenario.<br>
-<b>Secondary Actors:</b> None
+<p>
+  <b>Primary actor: </b>Player<br>
+  <b>Scope:</b>Game<br>
+  <b>Level:</b> User Goal<br>
+  <b>Stakeholders and Interests:</b><br>
+  Player: Wants to add a new building to the map.<br>
+  <b>Precondition:</b> Game is not paused<br>
+  <b>Minimal Guarantees:</b> No building is placed and Player’s funds remain unchanged.<br>
+  <b>Success Guarantees:</b> New building is visible on map after short build time; position of new building has effect on the score; building counter goes up; position of new building has effect on score.<br>
+  <b>Trigger:</b> Player decides to place a building.<br>
+  <b>Main Success Scenario:</b>
+  <ol>
+  <li>Player: select building type from list.</li>
+  <li>Player: choose location for building on map grid.</li>
+  <li>Player: pay for building.</li>
+  <li>Building Counter: increase by one.</li>
+  <li>Map: display building in a construction state in the chosen location for a predetermined building time.</li>
+  <li>Map: display building in finished state in the chosen location.</li>
+  <li>Score: calculate score.</li>
+  </ol>
+  <b>Extensions:</b><br>
+  1a. Player does not have sufficient funds: Do not allow Player to select the building type (give visible/audible feedback? prompt Player to select different building?).<br>
+  2a. The chosen location is invalid: Prompt Player to choose a new location or cancel. <br>
+  5a. Game ends during the building time: Do not do any of the following points in the main success scenario.<br>
+  <b>Secondary Actors:</b> None
 </p>
 </div>
 </body>
