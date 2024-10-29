@@ -1,3 +1,5 @@
+<style>
+
 body{
     background-color: rgb(249, 245, 254);
     box-shadow: inset;
@@ -8,16 +10,18 @@ body{
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #182c4c;
-    padding-left: 3%;
 }
 
 h2 {
-    padding-left: 5%;
+    color: #182c4c;
+}
 
 .pdfs {
     padding-left: 30%;
 }
 
-.req-link {
+.user_req {
     padding-left: 30%;
 }
+
+</style>
