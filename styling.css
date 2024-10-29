@@ -24,6 +24,10 @@ h3 {
     color: #182c4c;
 }
 
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .pdfs {
     padding-left: 10%;
 }
