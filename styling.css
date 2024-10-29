@@ -10,18 +10,26 @@ body{
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #182c4c;
+    padding-left: 5%;
+    paddinf-top: 5%;
 }
 
 h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #182c4c;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #182c4c;
 }
 
 .pdfs {
-    padding-left: 30%;
+    padding-left: 10%;
 }
 
 .user_req {
-    padding-left: 30%;
+    padding-left: 10%;
 }
 
 </style>
