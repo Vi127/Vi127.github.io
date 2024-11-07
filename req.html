@@ -9,40 +9,8 @@
 <h1 style="color: rgba(24, 44, 76, 1);">Team 2: Requirements</h1>
 <h2 style="color: rgba(24, 44, 76, 1);">Use Cases:</h2>
 
-<div class = "Place building">
-<h3> <b>1. Place Building </b></h3>
-<p>
-  <b>Primary actor: </b>Player<br>
-  <b>Scope:</b>Game<br>
-  <b>Level:</b> User Goal<br>
-  <b>Stakeholders and Interests:</b><br>
-  Player: Wants to add a new building to the map.<br>
-  <b>Precondition:</b> Game is not paused<br>
-  <b>Minimal Guarantees:</b> No building is placed and Player’s funds remain unchanged.<br>
-  <b>Success Guarantees:</b> New building is visible on map after short build time; position of new building has effect on the score; building counter goes up; position of new building has effect on score.<br>
-  <b>Trigger:</b> Player decides to place a building.<br>
-  <b>Main Success Scenario:</b>
-</p>
-<ol>
-  <li>Player: select building type from list.</li>
-  <li>Player: choose location for building on map grid.</li>
-  <li>Player: pay for building.</li>
-  <li>Building Counter: increase by one.</li>
-  <li>Map: display building in a construction state in the chosen location for a predetermined building time.</li>
-  <li>Map: display building in finished state in the chosen location.</li>
-  <li>Score: calculate score.</li>
-</ol>
-<p>
-  <b>Extensions:</b><br>
-  1a. Player does not have sufficient funds: Do not allow Player to select the building type (give visible/audible feedback? prompt Player to select different building?).<br>
-  2a. The chosen location is invalid: Prompt Player to choose a new location or cancel. <br>
-  5a. Game ends during the building time: Do not do any of the following points in the main success scenario.<br>
-  <b>Secondary Actors:</b> None
-</p>
-</div>
-
 <div class="Destroy building">
-  <h3><b>2. Destroy Building</b></h3>
+  <h3><b>1. Destroy Building</b></h3>
   <p>
     <b>Primary actor:</b> Player<br>
     <b>Scope:</b> Game<br>
@@ -69,34 +37,8 @@
   </p>
 </div>
 
-<div class="Pause">
-  <h3><b>3. Pause</b></h3>
-  <p>
-    <b>Primary actor:</b> Player<br>
-    <b>Scope:</b> Game<br>
-    <b>Level:</b> User Goal<br>
-    <b>Stakeholders and Interests:</b><br>
-    Player: Wants to pause the timer.<br>
-    Timer: Wants to stop counting down while the game is paused.<br>
-    <b>Precondition:</b> Game is not paused<br>
-    <b>Minimal Guarantees:</b> Game remains unpaused.<br>
-    <b>Success Guarantees:</b> Timer stops counting down; displays unpause button; Player is not able to interact with any elements apart from the unpause button.<br>
-    <b>Trigger:</b> Player decides to pause game.<br>
-    <b>Main Success Scenario:</b>
-  </p>
-  <ol>
-    <li>Player: interact with the pause button.</li>
-    <li>Timer: stop counting down, remember its current time.</li>
-    <li>Map: display unpause button, do not allow player to interact with any other elements.</li>
-  </ol>
-  <p>
-    <b>Extensions:</b> None<br>
-    <b>Secondary Actors:</b> Timer
-  </p>
-</div>
-
 <div class="Resume">
-  <h3><b>4. Resume</b></h3>
+  <h3><b>2. Resume</b></h3>
   <p>
     <b>Primary actor:</b> Player<br>
     <b>Scope:</b> Game<br>
@@ -122,7 +64,7 @@
 </div>
 
 <div class="Game ends">
-  <h3><b>5. Game Ends</b></h3>
+  <h3><b>3. Game Ends</b></h3>
   <p>
     <b>Primary actor:</b> Timer<br>
     <b>Scope:</b> Game<br>
@@ -151,7 +93,7 @@
 </div>
 
 <div class="Event occurs">
-  <h3><b>6. Event Occurs</b></h3>
+  <h3><b>4. Event Occurs</b></h3>
   <p>
     <b>Primary actor:</b> Player<br>
     <b>Scope:</b> Game<br>
@@ -179,7 +121,7 @@
 </div>
 
 <div class="Money increase">
-  <h3><b>7. Money Increase</b></h3>
+  <h3><b>5. Money Increase</b></h3>
   <p>
     <b>Primary actor:</b> Timer<br>
     <b>Scope:</b> Game<br>
@@ -205,7 +147,7 @@
 </div>
 
 <div class="Player responds to event">
-  <h3><b>8. Player Responds to Event</b></h3>
+  <h3><b>6. Player Responds to Event</b></h3>
   <p>
     <b>Primary actor:</b> Player<br>
     <b>Scope:</b> Game<br>
