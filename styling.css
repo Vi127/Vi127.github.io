@@ -36,4 +36,16 @@ p, li, ol, ul{
     padding-left: 10%;
 }
 
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+    
+
 </style>
