@@ -38,7 +38,17 @@ p, li, ol, ul{
 
 .column {
     float: left;
-    width: 50%;
+    /*width: 50%;*/
+}
+
+/*Try 75/25*/
+
+.left {
+    width: 75%;
+}
+
+.right {
+    width: 25%;
 }
 
 .row:after {
