@@ -24,11 +24,11 @@
     <b>Main Success Scenario:</b>
   </p>
   <ol>
-    <li>Player: select building on map.</li>
-    <li>Player: select destroy option.</li>
-    <li>Building Counter: decrease by one.</li>
-    <li>Map: no longer display a building in that location.</li>
-    <li>Score: calculate score.</li>
+    <li><i>Player:</i> select building on map.</li>
+    <li><i>Player:</i> select destroy option.</li>
+    <li><i>Building Counter:</i> decrease by one.</li>
+    <li><i>Map:</i> no longer display a building in that location.</li>
+    <li><i>Score:</i> <u>calculate score</u>.</li>
   </ol>
   <p>
     <b>Extensions:</b><br>
@@ -53,9 +53,9 @@
     <b>Main Success Scenario:</b>
   </p>
   <ol>
-    <li>Player: interact with the unpause button.</li>
-    <li>Timer: resume counting down from the time it was paused at.</li>
-    <li>Map: remove unpause button from display, reallow player to interact with other elements.</li>
+    <li><i>Player:</i> interact with the unpause button.</li>
+    <li><i>Timer</i>: resume counting down from the time it was paused at.</li>
+    <li><i>Map:</i> remove unpause button from display, reallow player to interact with other elements.</li>
   </ol>
   <p>
     <b>Extensions:</b> None<br>
@@ -79,11 +79,11 @@
     <b>Main Success Scenario:</b>
   </p>
   <ol>
-    <li>Timer: stop counting down.</li>
-    <li>Map: display play again button.</li>
-    <li>Score: calculate score.</li>
-    <li>Map: display score breakdown.</li>
-    <li>Map: do not allow Player to interact with other elements.</li>
+    <li><i>Timer:</i> stop counting down.</li>
+    <li><i>Map:</i> display play again button.</li>
+    <li><i>Score:</i> <u>calculate score</u>.</li>
+    <li><i>Map:</i> display score breakdown.</li>
+    <li><i>Map:</i> do not allow Player to interact with other elements.</li>
   </ol>
   <p>
     <b>Extensions:</b><br>
@@ -107,10 +107,10 @@
     <b>Main Success Scenario:</b>
   </p>
   <ol>
-    <li>Map: Informative message pops up to explain the positive event.</li>
-    <li>Score: Student satisfaction score increases by an appropriate amount.</li>
-    <li>Map: User is notified of any changes to the student satisfaction score and/or funds.</li>
-    <li>Player: Continues playing the game or reacts to the event.</li>
+    <li><i>Map:</i> Informative message pops up to explain the positive event.</li>
+    <li><i>Score:</i> Student satisfaction score increases by an appropriate amount.</li>
+    <li><i>Map:</i> User is notified of any changes to the student satisfaction score and/or funds.</li>
+    <li><i>Player:</i> Continues playing the game or reacts to the event.</li>
   </ol>
   <p>
     <b>Extensions:</b><br>
@@ -135,9 +135,9 @@
     <b>Main Success Scenario:</b>
   </p>
   <ol>
-    <li>Map: Informative message pops up to explain the increase in money.</li>
-    <li>Balance: Bank balance is increased.</li>
-    <li>Player: Player exits out of the pop-up and continues playing the game.</li>
+    <li><i>Map:</i> Informative message pops up to explain the increase in money.</li>
+    <li><i>Balance:</i> Bank balance is increased.</li>
+    <li><i>Player:</i> Player exits out of the pop-up and continues playing the game.</li>
   </ol>
   <p>
     <b>Extensions:</b><br>
@@ -153,18 +153,45 @@
     <b>Scope:</b> Game<br>
     <b>Level:</b> User Goal<br>
     <b>Stakeholders and Interests:</b><br>
-    Player: Wants to select an appropriate response to an event that will increase the student satisfaction score the most.<br>
+    Player: Wants to view a description for a random event and understand its effects.<br>
     <b>Precondition:</b> Game is not paused. An event has occurred.<br>
-    <b>Minimal Guarantees:</b> The player can choose their response. This action will either increase or decrease the student satisfaction points.<br>
-    <b>Success Guarantees:</b> The chosen action is performed. User receives feedback to confirm this. The student satisfaction score has either increased or decreased.<br>
+    <b>Minimal Guarantees:</b> The player views the event description and explanation of its effects. The studebt satisfaction score will either increase or decrease.<br>
+    <b>Success Guarantees:</b> The player views and understands the event description and its effects. The student satisfaction score will either increase or decrease.<br>
     <b>Trigger:</b> An event has occurred.<br>
     <b>Main Success Scenario:</b>
   </p>
   <ol>
-    <li>Map: Choices displayed to the user.</li>
-    <li>Player: User selects a choice.</li>
-    <li>Map: Choice’s effects are explained/shown to the user.</li>
-    <li>Score: Student satisfaction score is changed appropriately according to the choice made.</li>
+    <li><i>Map:</i>Event description and effects are shown to the user through a pop-up.</li>
+    <li><i>Player:</i> User closes pop-up screen.</li>
+    <li><i>Score:</i> Student satisfaction score is changed appropriately in alignment wth the events that occured.</li>
+    </ol>
+  <p>
+    <b>Extensions:</b> None<br>
+    <b>Secondary Actors:</b> None
+  </p>
+</div>
+
+<h2 style="color: rgba(24, 44, 76, 1);">Abstract Use Cases:</h2>
+  
+<div class="Pay">
+  <h3><b>1. Pay</b></h3>
+  <p>
+    <b>Primary actor:</b> Player<br>
+    <b>Scope:</b> Game<br>
+    <b>Level:</b>Subfunction<br>
+    <b>Stakeholders and Interests:</b><br>
+    Player: Wants to pay for a building/ respond to an event.<br>
+    <b>Precondition:</b>There is something that must be paid for.<br>
+    <b>Minimal Guarantees:</b> Player's balance is decreaed.<br>
+    <b>Success Guarantees:</b> Correct amount is deducted from the balance. User receives feedback to confirm the building/ event has been paid for.<br>
+    <b>Trigger:</b> Building/ event requires user to pay.<br>
+    <b>Main Success Scenario:</b>
+  </p>
+  <ol>
+    <li><i>Map:</i>Pop-up notification prompting user to pay a specific amount of money.</li>
+    <li><i>User:</i> Accepts the payment.</li>
+    <li><i>Balance:</i> User's balance is decreased by the correct amount.</li>
+    <li><i>Map:</i> Shows the effect of the payment, while giving the user feedback to confirm they have paid..</li>
   </ol>
   <p>
     <b>Extensions:</b> None<br>
@@ -172,4 +199,28 @@
   </p>
 </div>
 
+<div class="Calculate Score">
+  <h3><b>2. Calculate Score</b></h3>
+  <p>
+    <b>Primary actor:</b> Score<br>
+    <b>Scope:</b> Game<br>
+    <b>Level:</b>Subfunction<br>
+    <b>Stakeholders and Interests:</b><br>
+    Player: Wants to see their current student satisfaction score.<br>
+    <b>Precondition:</b>An event has occurred that has changed the score.<br>
+    <b>Minimal Guarantees:</b> The score has changed correctly.<br>
+    <b>Success Guarantees:</b> User can see the current correct student satisfaction score..<br>
+    <b>Trigger:</b> An event has occurred.<br>
+    <b>Main Success Scenario:</b>
+  </p>
+  <ol>
+    <li><i>Map:</i>Displays a pop-up that an event has occurred.</li>
+    <li><i>Map:</i>Student satisfaction score changes the [TO CHANGE] number/bar?</li>
+  </ol>
+  <p>
+    <b>Extensions:</b> None<br>
+    <b>Secondary Actors:</b> None
+  </p>
+</div>
+  
 </body>
